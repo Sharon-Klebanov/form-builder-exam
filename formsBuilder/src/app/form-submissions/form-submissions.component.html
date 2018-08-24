@@ -1,0 +1,12 @@
+<h2>Form Submissions Page</h2>
+<table>
+  <tr>
+    <th *ngFor="let input of inputs" >{{input.label}}</th>
+  </tr>
+  <tr *ngFor="let submit of submissions">
+    <td *ngFor="let value of submit">
+      {{value}}
+    </td>
+  </tr>
+</table>
+<button id="goBack" (click)="goBack()">Back</button>

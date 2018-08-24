@@ -1,0 +1,15 @@
+<h2>Form Submit Page</h2>
+<div class="container">
+    <div  class="row" *ngFor="let input of inputs">
+        <div class="col-25">
+            <label for="{{input.name}}">{{input.label}}:</label>
+        </div>
+        <div class="col-75">
+            <input type={{input.type}} name={{input.name}} id={{input.name}}>
+        </div>           
+    </div>
+    <div class="row">
+        <span> <button id="submit" (click)="submit()">Submit</button></span>
+        <span> <button id="goBack" (click)="goBack()">Back</button></span>
+    </div>
+</div>

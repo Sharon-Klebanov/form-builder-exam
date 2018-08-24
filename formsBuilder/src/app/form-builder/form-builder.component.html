@@ -1,0 +1,56 @@
+<h2>Form Builder Page</h2>
+    <div class="container">
+        <div  class="row">
+          <div class="col-25">
+              <label for="label">Field label:</label>
+          </div>
+          <div class="col-75">
+              <input #label type="text" id=label>
+          </div>
+        </div>
+        <div  class="row">
+          <div class="col-25">
+              <label for="name">Input name:</label>
+          </div>
+          <div class="col-75">
+              <input #name type="text" id=name>
+          </div>
+        </div>
+        <div  class="row">
+          <div class="col-25">
+              <label for="type">Input type:</label>
+          </div>
+          <div class="col-75">
+              <select #typeselect>
+                  <option *ngFor="let type of TYPES" value="{{type}}">{{type}}</option>
+              </select>
+          </div>            
+        </div>
+        <div class="row">
+            <span><button (click)="addInput(label.value,name.value, typeselect.value)">Add field</button></span>
+            <span><button id="goBack" (click)="goBack()">Back</button></span>
+        </div>
+    </div>
+    <div class="container">
+            <div  class="row" *ngFor="let input of inputs">
+              <div class="col-25">
+                  <label for="{{input.name}}">{{input.label}}:</label>
+              </div>
+              <div class="col-75">
+                  <input type={{input.type}} value={{input.name}} id={{input.name}} readonly>
+              </div>           
+            </div>
+            <div *ngIf="inputs.length">
+                <div  class="row">
+                        <div class="col-25">
+                            <label for="formName">Name Form:</label>
+                        </div>
+                        <div class="col-75">
+                            <input #formName type="text" id=formName>
+                        </div>
+                </div>
+                <div class="row">
+                    <button (click)="save(formName.value)">Save</button>
+                </div>
+            </div>
+    </div>

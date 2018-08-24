@@ -1,0 +1,18 @@
+<h2>Forms List Page</h2> 
+<span><a id="addForm" routerLink="/formBuilder" >Add Form</a></span>
+<table>
+  <tr>
+    <th>Form Id</th>
+    <th>Form Name</th>
+    <th>#Submissions</th>
+    <th>Submit Page</th>
+    <th>Submissions Page</th>
+  </tr>
+  <tr *ngFor="let form of forms">
+    <td>{{form.id}}</td>
+    <td>{{form.name}}</td>
+    <td>{{form.submissions.length}}</td>
+    <td><a routerLink="/formSubmit/{{form.id}}">View</a></td>
+    <td><a routerLink="/formSubmissions/{{form.id}}">View</a></td>
+  </tr>
+</table>

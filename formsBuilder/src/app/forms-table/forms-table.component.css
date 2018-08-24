@@ -1,0 +1,35 @@
+table {
+    margin-top: 20px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f6f8fa;
+}
+
+#addForm{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float:right;
+    text-decoration: none;
+}
+
+h2{
+    display: inline;
+}
+
+a {
+    color: #0366d6;
+}
