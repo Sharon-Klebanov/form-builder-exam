@@ -1,0 +1,4 @@
+1. Install Node.js® and npm if they are not already on your machine. (https://nodejs.org/en/download/)
+2. Then install the Angular CLI globally. ( run this in cmd : npm install -g @angular/cli )
+3. Open cmd, enter to formsBuilderServer folder and run the foloowing command : node app.js (then the server is up)
+4. Open another cmd, enter to fromsBuilder folder and run the foloowing command: ng serve --open (the client should be open in the broswer). 
